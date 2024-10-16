@@ -7,9 +7,9 @@ Este é um aplicativo Flutter que calcula a quantidade diária recomendada de ca
 
 ## Funcionalidades
 
-- **Cálculo de Calorias:**: Com base em peso, altura, idade, gênero, nível de atividade física e objetivo (perda ou ganho de peso).
-- **Histórico Local:**: Armazena o último cálculo realizado e permite visualizá-lo em uma tela separada.
-- **Limpar Histórico**: O usuário pode limpar o histórico de cálculos anteriores.
+- **Cálculo de Calorias:** Com base em peso, altura, idade, gênero, nível de atividade física e objetivo (perda ou ganho de peso).
+- **Histórico Local:** Armazena o último cálculo realizado e permite visualizá-lo em uma tela separada.
+- **Limpar Histórico** O usuário pode limpar o histórico de cálculos anteriores.
 
 ## Capturas de Tela
 
