@@ -51,6 +51,32 @@ Siga os passos abaixo para rodar o aplicativo localmente:
    flutter run
    ```
 
+## Gerar APK para Testes
+
+1. **Configurar o Ambiente:**
+
+  Certifique-se de que o ambiente Flutter esteja configurado corretamente com o SDK do Flutter e o Android Studio.
+
+2. **Gerar o APK de Release:**
+
+  Execute o seguinte comando para gerar o APK:
+
+   ```bash
+   flutter build apk --release
+   ```
+
+3. **Encontrar o APK:**
+
+O APK gerado estará localizado em:
+
+   ```bash
+   build/app/outputs/flutter-apk/app-release.apk
+   ```
+4. **Instalar o APK:**
+
+   Copie o APK para o dispositivo Android e instale-o.
+
+
 ## Tecnologias Utilizadas
 
 - **Flutter**: Framework para desenvolvimento multiplataforma (Android/iOS).
