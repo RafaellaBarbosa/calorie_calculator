@@ -54,7 +54,7 @@ class _UserInputScreenState extends State<UserInputScreen> {
                   label: 'Qual é o seu Peso (kg)',
                   controller: _weightController,
                   keyboardType: TextInputType.number,
-                  hintText: 'Digite seu Peso (em kg)',
+                  hintText: 'Digite seu Peso (kg)',
                   validator: (value) {
                     if (value!.isEmpty) {
                       return 'esse campo não pode ser vazio';
@@ -67,9 +67,10 @@ class _UserInputScreenState extends State<UserInputScreen> {
                   ],
                 ),
                 TextFormFildWidget(
-                  label: 'Qual é a sua altura?(cm)',
+                  label: 'Qual é a sua altura? (cm)',
                   controller: _heightController,
                   keyboardType: TextInputType.number,
+                  hintText: 'Digite sua altura (em cm)',
                   validator: (value) {
                     if (value!.isEmpty) {
                       return 'esse campo não pode ser vazio';
@@ -91,6 +92,7 @@ class _UserInputScreenState extends State<UserInputScreen> {
                     }
                     return null;
                   },
+                  hintText: 'Digite sua idade',
                   textInputAction: TextInputAction.next,
                   inputFormatters: [
                     FilteringTextInputFormatter.digitsOnly,
