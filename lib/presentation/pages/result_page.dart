@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/result_row_widget.dart';
+
 class ResultScreen extends StatelessWidget {
   final double weight;
   final double height;
@@ -48,38 +50,16 @@ class ResultScreen extends StatelessWidget {
               style: const TextStyle(fontSize: 22, color: Colors.blue),
             ),
             const SizedBox(height: 20),
-            _buildResultRow('Peso:', '${weight.toStringAsFixed(1)} kg'),
-            const Divider(),
-            _buildResultRow('Altura:', '${height.toStringAsFixed(1)} cm'),
-            const Divider(),
-            _buildResultRow('Idade:', '$age anos'),
-            const Divider(),
-            _buildResultRow('Gênero:', gender),
-            const Divider(),
-            _buildResultRow('Nível de Atividade:', activityLevel),
-            const Divider(),
-            _buildResultRow('Objetivo:', goal),
+            ResultRowWidget(
+                label: 'Peso:', value: '${weight.toStringAsFixed(1)} kg'),
+            ResultRowWidget(
+                label: 'Altura:', value: '${height.toStringAsFixed(1)} cm'),
+            ResultRowWidget(label: 'Idade:', value: '$age anos'),
+            ResultRowWidget(label: 'Gênero:', value: gender),
+            ResultRowWidget(label: 'Nível de Atividade:', value: activityLevel),
+            ResultRowWidget(label: 'Objetivo:', value: goal),
           ],
         ),
-      ),
-    );
-  }
-
-  Widget _buildResultRow(String label, String value) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 10),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            label,
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-          ),
-          Text(
-            value,
-            style: const TextStyle(fontSize: 16),
-          ),
-        ],
       ),
     );
   }

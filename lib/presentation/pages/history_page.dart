@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../controller/calorie_controller.dart';
+import '../widgets/result_row_widget.dart';
 
 class HistoryScreen extends StatefulWidget {
   const HistoryScreen({super.key});
@@ -60,16 +61,26 @@ class _HistoryScreenState extends State<HistoryScreen> {
                     style: const TextStyle(fontSize: 22, color: Colors.blue),
                   ),
                   const SizedBox(height: 20),
-                  _buildResultRow('Peso:', '${_lastCalculation!['weight']} kg'),
-                  _buildResultRow(
-                      'Altura:', '${_lastCalculation!['height']} cm'),
-                  _buildResultRow('Idade:', '${_lastCalculation!['age']} anos'),
-                  _buildResultRow(
-                      'Gênero:', _lastCalculation!['gender'] ?? 'Desconhecido'),
-                  _buildResultRow('Nível de Atividade:',
-                      _lastCalculation!['activityLevel'] ?? 'Desconhecido'),
-                  _buildResultRow(
-                      'Objetivo:', _lastCalculation!['goal'] ?? 'Desconhecido'),
+                  ResultRowWidget(
+                    label: 'Peso:',
+                    value: '${_lastCalculation!['weight']} kg',
+                  ),
+                  ResultRowWidget(
+                      label: 'Altura:',
+                      value: '${_lastCalculation!['height']} cm'),
+                  ResultRowWidget(
+                      label: 'Idade:',
+                      value: '${_lastCalculation!['age']} anos'),
+                  ResultRowWidget(
+                      label: 'Gênero:',
+                      value: _lastCalculation!['gender'] ?? 'Desconhecido'),
+                  ResultRowWidget(
+                      label: 'Nível de Atividade:',
+                      value:
+                          _lastCalculation!['activityLevel'] ?? 'Desconhecido'),
+                  ResultRowWidget(
+                      label: 'Objetivo:',
+                      value: _lastCalculation!['goal'] ?? 'Desconhecido'),
                   const SizedBox(height: 20),
                   ElevatedButton(
                     onPressed: _clearHistory,
@@ -77,25 +88,6 @@ class _HistoryScreenState extends State<HistoryScreen> {
                   ),
                 ],
               ),
-      ),
-    );
-  }
-
-  Widget _buildResultRow(String label, String value) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 10),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            label,
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-          ),
-          Text(
-            value,
-            style: const TextStyle(fontSize: 16),
-          ),
-        ],
       ),
     );
   }
