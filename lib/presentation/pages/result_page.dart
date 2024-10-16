@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/card_calories_widget.dart';
 import '../widgets/result_row_widget.dart';
 
 class ResultScreen extends StatelessWidget {
@@ -40,15 +41,9 @@ class ResultScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const SizedBox(height: 20),
-            const Text(
-              'Calorias Diárias Recomendadas',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 10),
-            Text(
-              '${calories.toStringAsFixed(2)} kcal',
-              style: const TextStyle(fontSize: 22, color: Colors.blue),
-            ),
+            CardCalorieWidget(
+                title: 'Calorias Diárias Recomendadas',
+                calories: '${calories.toStringAsFixed(2)} kcal'),
             const SizedBox(height: 20),
             ResultRowWidget(
                 label: 'Peso:', value: '${weight.toStringAsFixed(1)} kg'),

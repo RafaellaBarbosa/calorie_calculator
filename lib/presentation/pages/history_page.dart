@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../controller/calorie_controller.dart';
+import '../widgets/card_calories_widget.dart';
 import '../widgets/result_row_widget.dart';
 
 class HistoryScreen extends StatefulWidget {
@@ -51,14 +52,10 @@ class _HistoryScreenState extends State<HistoryScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const SizedBox(height: 20),
-                  const Text(
-                    'Calorias Diárias Recomendadas',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
-                  const SizedBox(height: 10),
-                  Text(
-                    '${_lastCalculation!['calories'].toStringAsFixed(2) ?? 'N/A'} kcal',
-                    style: const TextStyle(fontSize: 22, color: Colors.blue),
+                  CardCalorieWidget(
+                    title: 'Calorias Diárias Recomendadas',
+                    calories:
+                        '${_lastCalculation!['calories'].toStringAsFixed(2)} kcal',
                   ),
                   const SizedBox(height: 20),
                   ResultRowWidget(

@@ -14,7 +14,7 @@ class CalorieCalculatorApp extends StatelessWidget {
     return MaterialApp(
       title: 'Calorie Calculator',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
       ),
       home: const UserInputScreen(),
     );
