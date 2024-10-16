@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../../controller/calorie_controller.dart';
+import '../../core/utils/validation.dart';
 import '../widgets/dropdown_widget.dart';
 import '../widgets/text_form_field_widget.dart';
 import 'history_page.dart';
@@ -55,12 +56,7 @@ class _UserInputScreenState extends State<UserInputScreen> {
                   controller: _weightController,
                   keyboardType: TextInputType.number,
                   hintText: 'Digite seu Peso (kg)',
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return 'esse campo não pode ser vazio';
-                    }
-                    return null;
-                  },
+                  validator: (value) => Validation.validateNotEmpty(value),
                   textInputAction: TextInputAction.next,
                   inputFormatters: [
                     FilteringTextInputFormatter.digitsOnly,
@@ -71,12 +67,7 @@ class _UserInputScreenState extends State<UserInputScreen> {
                   controller: _heightController,
                   keyboardType: TextInputType.number,
                   hintText: 'Digite sua altura (em cm)',
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return 'esse campo não pode ser vazio';
-                    }
-                    return null;
-                  },
+                  validator: (value) => Validation.validateNotEmpty(value),
                   textInputAction: TextInputAction.next,
                   inputFormatters: [
                     FilteringTextInputFormatter.digitsOnly,
@@ -86,12 +77,7 @@ class _UserInputScreenState extends State<UserInputScreen> {
                   label: 'Qual é a sua idade?',
                   controller: _ageController,
                   keyboardType: TextInputType.number,
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return 'esse campo não pode ser vazio';
-                    }
-                    return null;
-                  },
+                  validator: (value) => Validation.validateNotEmpty(value),
                   hintText: 'Digite sua idade',
                   textInputAction: TextInputAction.next,
                   inputFormatters: [
