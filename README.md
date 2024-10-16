@@ -22,7 +22,7 @@ Este é um aplicativo Flutter que calcula a quantidade diária recomendada de ca
 ![Tela Histórico](assets/images/pagina_historico.jpg)
 *Tela de histórico*
 
-![Tela Histórico Vazia](assets/images/pagina_sem_historico.jpgo.jpg)
+![Tela Histórico Vazia](assets/images/pagina_sem_historico.jpg)
 *Tela de histórico vazia*
 
 ## Como Rodar o Projeto
