@@ -40,7 +40,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Último Cálculo',
+          'Histórico',
         ),
         centerTitle: true,
       ),
@@ -76,8 +76,10 @@ class _HistoryScreenState extends State<HistoryScreen> {
                       value:
                           _lastCalculation!['activityLevel'] ?? 'Desconhecido'),
                   ResultRowWidget(
-                      label: 'Objetivo:',
-                      value: _lastCalculation!['goal'] ?? 'Desconhecido'),
+                    label: 'Objetivo:',
+                    value: _lastCalculation!['goal'] ?? 'Desconhecido',
+                    hasDivider: false,
+                  ),
                   const SizedBox(height: 20),
                   ElevatedButton(
                     onPressed: _clearHistory,

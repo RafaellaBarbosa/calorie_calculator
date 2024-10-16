@@ -32,7 +32,7 @@ Siga os passos abaixo para rodar o aplicativo localmente:
 1. **Clone o repositório:**
 
    ```bash
-   git clone https://github.com/RafaellaBarbosa/calorie_calculator
+   git clone https://github.com/RafaellaBarbosa/calorie_calculator.git
    ```
 
 2. **Instale as dependências:**

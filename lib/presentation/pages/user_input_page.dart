@@ -52,32 +52,35 @@ class _UserInputScreenState extends State<UserInputScreen> {
             child: Column(
               children: [
                 TextFormFildWidget(
-                  label: 'Qual é o seu Peso (kg)',
+                  label: 'Peso (kg)',
                   controller: _weightController,
                   keyboardType: TextInputType.number,
                   hintText: 'Digite seu Peso (kg)',
-                  validator: (value) => Validation.validateNotEmpty(value),
+                  validator: (value) =>
+                      Validation.validateIfTextIsNotEmpty(value),
                   textInputAction: TextInputAction.next,
                   inputFormatters: [
                     FilteringTextInputFormatter.digitsOnly,
                   ],
                 ),
                 TextFormFildWidget(
-                  label: 'Qual é a sua altura? (cm)',
+                  label: 'Altura (cm)',
                   controller: _heightController,
                   keyboardType: TextInputType.number,
-                  hintText: 'Digite sua altura (em cm)',
-                  validator: (value) => Validation.validateNotEmpty(value),
+                  hintText: 'Digite sua altura (cm)',
+                  validator: (value) =>
+                      Validation.validateIfTextIsNotEmpty(value),
                   textInputAction: TextInputAction.next,
                   inputFormatters: [
                     FilteringTextInputFormatter.digitsOnly,
                   ],
                 ),
                 TextFormFildWidget(
-                  label: 'Qual é a sua idade?',
+                  label: 'Idade',
                   controller: _ageController,
                   keyboardType: TextInputType.number,
-                  validator: (value) => Validation.validateNotEmpty(value),
+                  validator: (value) =>
+                      Validation.validateIfTextIsNotEmpty(value),
                   hintText: 'Digite sua idade',
                   textInputAction: TextInputAction.next,
                   inputFormatters: [
@@ -85,7 +88,7 @@ class _UserInputScreenState extends State<UserInputScreen> {
                   ],
                 ),
                 DropdownWidget(
-                    label: 'Qual é o seu Gênero?',
+                    label: 'Gênero',
                     options: const ['Masculino', 'Feminino'],
                     currentValue: _gender,
                     onChanged: (value) {

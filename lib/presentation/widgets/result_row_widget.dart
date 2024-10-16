@@ -5,9 +5,11 @@ class ResultRowWidget extends StatelessWidget {
     super.key,
     required this.label,
     required this.value,
+    this.hasDivider = true,
   });
   final String label;
   final String value;
+  final bool hasDivider;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +31,7 @@ class ResultRowWidget extends StatelessWidget {
               ),
             ],
           ),
-          const Divider(),
+          if (hasDivider) const Divider(),
         ],
       ),
     );

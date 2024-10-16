@@ -27,12 +27,6 @@ class ResultScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Resultado do Cálculo',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-          ),
-        ),
         centerTitle: true,
       ),
       body: Padding(
@@ -52,7 +46,11 @@ class ResultScreen extends StatelessWidget {
             ResultRowWidget(label: 'Idade:', value: '$age anos'),
             ResultRowWidget(label: 'Gênero:', value: gender),
             ResultRowWidget(label: 'Nível de Atividade:', value: activityLevel),
-            ResultRowWidget(label: 'Objetivo:', value: goal),
+            ResultRowWidget(
+              label: 'Objetivo:',
+              value: goal,
+              hasDivider: false,
+            ),
           ],
         ),
       ),
